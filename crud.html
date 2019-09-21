@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="HTML,CSS,JavaScript,ES5,ES6">
+	<meta name="author" content="Philip R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CRUD - Tutorial</title>  
+	<link href="stylesheet.css" rel="stylesheet">	
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <h1>TODO LIST</h1>
+      </div>  
+
+      <br>
+      <div class="module user-container">
+     
+        <form class="user-box form-reg">
+          <fieldset><legend>REGISTER NEW USER</legend> 
+            <label>Enter first name <input type="text" class="finput f-name"></input></label><br>
+            <label>Enter surname<input type="text" class="finput l-name"></input></label><br>
+            <label>Enter email<input type="e-mail" class="finput e-name"></input></label><br>
+            <label>Enter age<input type="number" class="finput age" min="1" max="99"></input></label><br>
+            <button class="btn btn-reg">Register user</button>          
+          </fieldset>
+        </form>
+
+        <fieldset class="user-box"><legend>REGISTERED USERS</legend>
+          <table class="user-table">
+            <tr>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>E-mail</th>
+              <th>Age</th>
+            </tr>
+          </table>
+        </fieldset>    
+		
+        <form class="user-box form-del">
+          <fieldset><legend>DELETE USER</legend>
+            <label>Enter user name
+              <input type="text">
+            </label>
+            <button class="btn btn-del">Delete user</button>          
+          </fieldset>
+        </form>
+        <br>       
+      </div><br>  
+    	     
+  </div><br>
+    <!--<script src="script.js"></script>-->    
+    <!--<script src="crudEs5_script.js"></script>-->     
+	<script src="crudEs6_script.js"></script>
+    <noscript>Your browser does not support Javascript!</noscript>
+  </body>
+</html>

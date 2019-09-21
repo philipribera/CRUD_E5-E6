@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bubbles</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: roboto, Verdana, Geneva, Tahoma, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: rgb(244, 244, 244);
+      }
+      h1 {
+        color: rgb(115, 214, 114);
+      }
+      h2,
+      h3 {
+        color: rgb(37, 37, 37);
+      }
+
+      .btn {
+        background-color: rgb(46, 130, 144);
+        color: rgb(244, 244, 244);
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 5px 8px;
+        margin: 14px 14px 14px 0;
+      }
+      .wrapper {
+        width: 80%;
+        height: 100%;
+        background-color: antiquewhite;
+        padding: 22px;
+        margin: 0 auto;
+      }
+      #canvas {
+        width: 55%;
+        min-width: 482px;
+        height: 502px;
+        background-color: rgb(17, 17, 17);
+        margin: 8px auto;
+        border: 2px solid rgb(102, 102, 102);
+      }
+      form {
+        padding: 8px;
+      }
+      .bubble-panel {
+        width: 62%;
+        min-width: 478px; 
+      }
+      input {
+        cursor: pointer;
+        padding: 2px 4px;
+        margin: 12px 4px 0 0;
+      }
+      input:not([type="submit"]):not([type="color"]) {
+        max-width: 80px;
+        background-color: rgb(37, 37, 37);
+        color: rgb(248, 248, 248);
+      }
+      input[type="submit"] {        
+        background-color: rgb(34, 173, 21);
+        color: rgb(248,248,248);
+        padding: 5px 6px;
+        margin-left: 22px;
+        border-radius: 6px;
+      }
+      label {
+        cursor: pointer;
+        margin-right: 12px;
+        white-space: nowrap;
+      }
+      input[type="submit"]:hover {
+        opacity: 0.9;
+      }
+
+      /*** MEDIA QUERIES ***/  
+      @media only screen and (max-width: 1200px) {
+        .wrapper {
+          width: 90%;
+          padding: 12px;
+        }
+        #canvas {
+          width: 68%;
+          min-width: 442px;        
+        }
+      }    
+      @media only screen and (max-width: 990px) {
+        .wrapper {
+          width: 94%;
+          padding: 12px;
+        }
+        #canvas {
+          width: 75%;
+          min-width: 442px;        
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .wrapper {
+          width: 100%;
+          padding: 12px;
+        }
+        .bubble-panel {
+          width: 60%;
+          min-width: 472px; 
+        }
+        #canvas {
+          width: 90%;
+          min-width: 442px;        
+        }
+        input {
+          margin: 12px 4px 0 0;
+        }
+        label {
+          margin-right: 10px;
+        }
+        input[type="submit"] {                
+          margin-left: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>BUBBLE MANIAK</h1>
+      <form id="my-form" class="bubble-panel" action="#">
+        <br />
+        <label
+          >(X) position:
+          <input class="input-data in-x" type="number" min="20" max="400" />
+        </label>
+        <label
+          >(Y) position:
+          <input class="input-data in-y" type="number" min="20" max="200" />
+        </label>
+        <label
+          >Circle (radius):
+          <input class="input-data in-radius" type="number" min="1" max="20" />
+        </label>
+        <label
+          >Circle (color):
+          <input class="input-data in-color" type="color" value="#000000"/>
+        </label>
+        <input class="submit-circle" type="submit" value="Create circle" />
+      </form>
+      <canvas id="canvas"> </canvas>
+      <br />
+    </div>
+    <br />
+    <script src="bubble_script.js"></script>
+  </body>
+</html>

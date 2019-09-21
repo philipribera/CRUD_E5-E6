@@ -1,0 +1,140 @@
+   /*** CRUD STYLESHEET ***/
+   
+	* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        outline: none;
+      }
+      body {        
+        font-family: roboto, verdana, sans-serif;
+        background-color: rgb(77, 77, 77);
+      }
+      .wrapper {
+        background-color: rgb(246, 246, 246);
+        width: 69%;
+        height: 100%;
+        min-height: 792px;
+        padding: 32px;
+        margin: 0 auto;
+      }
+      .module {
+        padding: 14px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: rgb(37, 37, 37);
+      }
+
+      .btn {
+        background-color: rgb(46, 130, 144);
+        color: rgb(244,244,244);
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 5px 8px;
+        margin: 14px 14px 14px 0;        
+      }
+      
+      .btn-hd {
+        display: none;
+      }
+
+      .stopped-clock {
+        color: rgb(122, 122, 122);
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .display-clock, .image-carousel-hd {
+        display: none;
+      }
+
+      .user-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        padding: 22px;
+        border: 2px solid rgb(222,222,222);
+      }
+      .user-box {
+        flex-basis: 48%;        
+        min-width: 220px;
+        margin: 0 8px;
+      }
+
+      fieldset {
+        padding: 18px 10px;
+        border: 2px solid rgb(212,212,212);
+      }
+      label {
+        margin-right: 12px;        
+      }
+      input {
+        padding: 4px;
+        margin: 0 0 10px 10px;
+      }
+      legend {
+        color: rgb(147,147,147);
+        padding: 0 4px;
+      }
+      table {        
+        border-collapse: collapse; 
+      }
+      tr {
+        height: 18px;
+      }
+      tr:nth-child(even) {
+        background-color: rgb(196, 222, 224);
+      } 
+      th {
+        min-width: 112px;
+        text-align: left;
+        color: rgb(25, 73, 146);
+        padding: 2px;        
+        border-bottom: 2px solid rgb(212,212,212);
+      }   
+      .age {
+        width: 50px;
+      }   
+      td {  
+        color: rgb(28, 75, 148);      
+        padding: 0 6px;            
+      }       
+      .btn-delete {
+        background-color: rgb(222,222,222);
+        color: red;
+        padding: 0 4px;                
+        margin: 6x;    
+        border: 1px solid rgb(157,157,157);    
+        float: right;
+      }
+      .btn-delete:hover {
+        border-color: rgb(248,248,248);
+      }
+      .field-warning {
+        border: 2px solid rgb(242,59,59);
+      }
+	 	
+				  
+      /*** MEDIA QUERIES ***/
+      @media only screen and (max-width: 1600px) {
+          .wrapper {        
+          width: 96%;
+        }
+        fieldset {
+          padding: 14px 12px;
+        }
+        .user-container {        
+          justify-content: stretch;
+          padding: 20px 14px;
+        }
+        .user-box {          
+          flex-basis: 98%;   
+          min-height: 300px;
+          margin-bottom: 12px;                  
+        }	
+	
